@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		038190272021DA31009F0F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038190262021DA31009F0F12 /* AppDelegate.swift */; };
+		038190292021DA31009F0F12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038190282021DA31009F0F12 /* ViewController.swift */; };
+		0381902B2021DA31009F0F12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0381902A2021DA31009F0F12 /* Images.xcassets */; };
+		0381902E2021DA31009F0F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0381902C2021DA31009F0F12 /* Main.storyboard */; };
+		0381903A2021DA31009F0F12 /* HeartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038190392021DA31009F0F12 /* HeartTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		038190342021DA31009F0F12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038190192021DA31009F0F12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 038190202021DA31009F0F12;
+			remoteInfo = Heart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		038190212021DA31009F0F12 /* Heart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		038190252021DA31009F0F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		038190262021DA31009F0F12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		038190282021DA31009F0F12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0381902A2021DA31009F0F12 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0381902D2021DA31009F0F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		038190332021DA31009F0F12 /* HeartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		038190382021DA31009F0F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		038190392021DA31009F0F12 /* HeartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0381901E2021DA31009F0F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		038190302021DA31009F0F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		038190182021DA31009F0F12 = {
+			isa = PBXGroup;
+			children = (
+				038190232021DA31009F0F12 /* Heart */,
+				038190362021DA31009F0F12 /* HeartTests */,
+				038190222021DA31009F0F12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		038190222021DA31009F0F12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				038190212021DA31009F0F12 /* Heart.app */,
+				038190332021DA31009F0F12 /* HeartTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		038190232021DA31009F0F12 /* Heart */ = {
+			isa = PBXGroup;
+			children = (
+				038190262021DA31009F0F12 /* AppDelegate.swift */,
+				038190282021DA31009F0F12 /* ViewController.swift */,
+				0381902A2021DA31009F0F12 /* Images.xcassets */,
+				0381902C2021DA31009F0F12 /* Main.storyboard */,
+				038190242021DA31009F0F12 /* Supporting Files */,
+			);
+			path = Heart;
+			sourceTree = "<group>";
+		};
+		038190242021DA31009F0F12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				038190252021DA31009F0F12 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		038190362021DA31009F0F12 /* HeartTests */ = {
+			isa = PBXGroup;
+			children = (
+				038190392021DA31009F0F12 /* HeartTests.swift */,
+				038190372021DA31009F0F12 /* Supporting Files */,
+			);
+			path = HeartTests;
+			sourceTree = "<group>";
+		};
+		038190372021DA31009F0F12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				038190382021DA31009F0F12 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		038190202021DA31009F0F12 /* Heart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0381903D2021DA31009F0F12 /* Build configuration list for PBXNativeTarget "Heart" */;
+			buildPhases = (
+				0381901D2021DA31009F0F12 /* Sources */,
+				0381901E2021DA31009F0F12 /* Frameworks */,
+				0381901F2021DA31009F0F12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Heart;
+			productName = Heart;
+			productReference = 038190212021DA31009F0F12 /* Heart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		038190322021DA31009F0F12 /* HeartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 038190402021DA31009F0F12 /* Build configuration list for PBXNativeTarget "HeartTests" */;
+			buildPhases = (
+				0381902F2021DA31009F0F12 /* Sources */,
+				038190302021DA31009F0F12 /* Frameworks */,
+				038190312021DA31009F0F12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				038190352021DA31009F0F12 /* PBXTargetDependency */,
+			);
+			name = HeartTests;
+			productName = HeartTests;
+			productReference = 038190332021DA31009F0F12 /* HeartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		038190192021DA31009F0F12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = joshuawebb;
+				TargetAttributes = {
+					038190202021DA31009F0F12 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					038190322021DA31009F0F12 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 038190202021DA31009F0F12;
+					};
+				};
+			};
+			buildConfigurationList = 0381901C2021DA31009F0F12 /* Build configuration list for PBXProject "Heart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 038190182021DA31009F0F12;
+			productRefGroup = 038190222021DA31009F0F12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				038190202021DA31009F0F12 /* Heart */,
+				038190322021DA31009F0F12 /* HeartTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0381901F2021DA31009F0F12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0381902B2021DA31009F0F12 /* Images.xcassets in Resources */,
+				0381902E2021DA31009F0F12 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		038190312021DA31009F0F12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0381901D2021DA31009F0F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				038190292021DA31009F0F12 /* ViewController.swift in Sources */,
+				038190272021DA31009F0F12 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0381902F2021DA31009F0F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0381903A2021DA31009F0F12 /* HeartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		038190352021DA31009F0F12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 038190202021DA31009F0F12 /* Heart */;
+			targetProxy = 038190342021DA31009F0F12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0381902C2021DA31009F0F12 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0381902D2021DA31009F0F12 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0381903B2021DA31009F0F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0381903C2021DA31009F0F12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0381903E2021DA31009F0F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Heart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0381903F2021DA31009F0F12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Heart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		038190412021DA31009F0F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HeartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heart.app/Contents/MacOS/Heart";
+			};
+			name = Debug;
+		};
+		038190422021DA31009F0F12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HeartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heart.app/Contents/MacOS/Heart";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0381901C2021DA31009F0F12 /* Build configuration list for PBXProject "Heart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0381903B2021DA31009F0F12 /* Debug */,
+				0381903C2021DA31009F0F12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0381903D2021DA31009F0F12 /* Build configuration list for PBXNativeTarget "Heart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0381903E2021DA31009F0F12 /* Debug */,
+				0381903F2021DA31009F0F12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		038190402021DA31009F0F12 /* Build configuration list for PBXNativeTarget "HeartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				038190412021DA31009F0F12 /* Debug */,
+				038190422021DA31009F0F12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 038190192021DA31009F0F12 /* Project object */;
+}
