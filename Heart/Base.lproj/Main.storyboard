@@ -669,13 +669,28 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Heart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="40h-D5-iaF">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Heart" id="BHK-eG-LE9"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="40h-D5-iaF" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="4ee-BU-RcE"/>
+                            <constraint firstItem="40h-D5-iaF" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Iss-Tw-pyS"/>
+                            <constraint firstAttribute="trailing" secondItem="40h-D5-iaF" secondAttribute="trailing" id="KtK-X4-mGc"/>
+                            <constraint firstAttribute="bottom" secondItem="40h-D5-iaF" secondAttribute="bottom" id="een-Qp-P7H"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="103" y="647"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Heart" width="615" height="595"/>
+    </resources>
 </document>
