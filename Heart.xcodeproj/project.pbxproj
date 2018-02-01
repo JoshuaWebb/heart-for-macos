@@ -12,6 +12,7 @@
 		0381902B2021DA31009F0F12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0381902A2021DA31009F0F12 /* Images.xcassets */; };
 		0381902E2021DA31009F0F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0381902C2021DA31009F0F12 /* Main.storyboard */; };
 		0381903A2021DA31009F0F12 /* HeartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038190392021DA31009F0F12 /* HeartTests.swift */; };
+		03AEC805202338A4007B47D5 /* TransparentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AEC804202338A3007B47D5 /* TransparentWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		038190332021DA31009F0F12 /* HeartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		038190382021DA31009F0F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		038190392021DA31009F0F12 /* HeartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTests.swift; sourceTree = "<group>"; };
+		03AEC804202338A3007B47D5 /* TransparentWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				0381902A2021DA31009F0F12 /* Images.xcassets */,
 				0381902C2021DA31009F0F12 /* Main.storyboard */,
 				038190242021DA31009F0F12 /* Supporting Files */,
+				03AEC804202338A3007B47D5 /* TransparentWindow.swift */,
 			);
 			path = Heart;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03AEC805202338A4007B47D5 /* TransparentWindow.swift in Sources */,
 				038190292021DA31009F0F12 /* ViewController.swift in Sources */,
 				038190272021DA31009F0F12 /* AppDelegate.swift in Sources */,
 			);
@@ -400,6 +404,7 @@
 				0381903F2021DA31009F0F12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		038190402021DA31009F0F12 /* Build configuration list for PBXNativeTarget "HeartTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +413,7 @@
 				038190422021DA31009F0F12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
