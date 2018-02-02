@@ -10,9 +10,14 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var mainImageView: NSImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // TODO: make dragging the image, drag the
+        //       window... might need to subclass NSImage.
+        //       Might be able to do it from here.
     }
 
     override var representedObject: AnyObject? {
@@ -20,7 +25,6 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
 
 }
 
