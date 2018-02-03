@@ -21,6 +21,10 @@ class TransparentWindow: NSWindow {
         internalInit()
     }
 
+    override var canBecomeMainWindow: Bool {
+        return true
+    }
+
     override var canBecomeKeyWindow: Bool {
         return true
     }

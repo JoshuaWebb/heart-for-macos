@@ -14,10 +14,6 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // TODO: make dragging the image, drag the
-        //       window... might need to subclass NSImage.
-        //       Might be able to do it from here.
     }
 
     override var representedObject: AnyObject? {
