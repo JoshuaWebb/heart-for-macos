@@ -3,7 +3,7 @@
 //  HeartTests
 //
 //  Created by josh on 31/01/2018.
-//  Copyright (c) 2018 joshuawebb. All rights reserved.
+//  Copyright (c) 2018 Joshua Webb. All rights reserved.
 //
 
 import Cocoa

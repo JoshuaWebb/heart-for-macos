@@ -14,12 +14,9 @@
 		0381903A2021DA31009F0F12 /* HeartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038190392021DA31009F0F12 /* HeartTests.swift */; };
 		03AEC805202338A4007B47D5 /* TransparentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AEC804202338A3007B47D5 /* TransparentWindow.swift */; };
 		03DC66562025CF0400C69C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC66552025CF0400C69C3D /* AppDelegate.swift */; };
-		03DC66582025CF0400C69C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC66572025CF0400C69C3D /* ViewController.swift */; };
 		03DC665A2025CF0400C69C3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03DC66592025CF0400C69C3D /* Images.xcassets */; };
 		03DC665D2025CF0400C69C3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03DC665B2025CF0400C69C3D /* Main.storyboard */; };
 		03DC66712025D58B00C69C3D /* HeartLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DC66512025CF0400C69C3D /* HeartLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		03DC66732025D5D200C69C3D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DC66722025D5D200C69C3D /* Cocoa.framework */; };
-		03DC66752025D5E100C69C3D /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DC66742025D5E100C69C3D /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +56,6 @@
 		03DC66512025CF0400C69C3D /* HeartLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DC66542025CF0400C69C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DC66552025CF0400C69C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03DC66572025CF0400C69C3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03DC66592025CF0400C69C3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		03DC665C2025CF0400C69C3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,8 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03DC66752025D5E100C69C3D /* ServiceManagement.framework in Frameworks */,
-				03DC66732025D5D200C69C3D /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				03DC66552025CF0400C69C3D /* AppDelegate.swift */,
-				03DC66572025CF0400C69C3D /* ViewController.swift */,
 				03DC66592025CF0400C69C3D /* Images.xcassets */,
 				03DC665B2025CF0400C69C3D /* Main.storyboard */,
 				03DC66532025CF0400C69C3D /* Supporting Files */,
@@ -232,7 +225,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
-				ORGANIZATIONNAME = joshuawebb;
+				ORGANIZATIONNAME = "Joshua Webb";
 				TargetAttributes = {
 					038190202021DA31009F0F12 = {
 						CreatedOnToolsVersion = 6.4;
@@ -317,7 +310,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03DC66582025CF0400C69C3D /* ViewController.swift in Sources */,
 				03DC66562025CF0400C69C3D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
