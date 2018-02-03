@@ -13,6 +13,13 @@
 		0381902E2021DA31009F0F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0381902C2021DA31009F0F12 /* Main.storyboard */; };
 		0381903A2021DA31009F0F12 /* HeartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038190392021DA31009F0F12 /* HeartTests.swift */; };
 		03AEC805202338A4007B47D5 /* TransparentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AEC804202338A3007B47D5 /* TransparentWindow.swift */; };
+		03DC66562025CF0400C69C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC66552025CF0400C69C3D /* AppDelegate.swift */; };
+		03DC66582025CF0400C69C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC66572025CF0400C69C3D /* ViewController.swift */; };
+		03DC665A2025CF0400C69C3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03DC66592025CF0400C69C3D /* Images.xcassets */; };
+		03DC665D2025CF0400C69C3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03DC665B2025CF0400C69C3D /* Main.storyboard */; };
+		03DC66712025D58B00C69C3D /* HeartLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DC66512025CF0400C69C3D /* HeartLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		03DC66732025D5D200C69C3D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DC66722025D5D200C69C3D /* Cocoa.framework */; };
+		03DC66752025D5E100C69C3D /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DC66742025D5E100C69C3D /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +32,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		03DC66702025D57900C69C3D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				03DC66712025D58B00C69C3D /* HeartLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		038190212021DA31009F0F12 /* Heart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		038190252021DA31009F0F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +56,12 @@
 		038190382021DA31009F0F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		038190392021DA31009F0F12 /* HeartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTests.swift; sourceTree = "<group>"; };
 		03AEC804202338A3007B47D5 /* TransparentWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentWindow.swift; sourceTree = "<group>"; };
+		03DC66512025CF0400C69C3D /* HeartLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DC66542025CF0400C69C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03DC66552025CF0400C69C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		03DC66572025CF0400C69C3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03DC66592025CF0400C69C3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		03DC665C2025CF0400C69C3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,10 +69,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DC66752025D5E100C69C3D /* ServiceManagement.framework in Frameworks */,
+				03DC66732025D5D200C69C3D /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		038190302021DA31009F0F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03DC664E2025CF0400C69C3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,6 +96,7 @@
 			children = (
 				038190232021DA31009F0F12 /* Heart */,
 				038190362021DA31009F0F12 /* HeartTests */,
+				03DC66522025CF0400C69C3D /* HeartLauncher */,
 				038190222021DA31009F0F12 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +106,7 @@
 			children = (
 				038190212021DA31009F0F12 /* Heart.app */,
 				038190332021DA31009F0F12 /* HeartTests.xctest */,
+				03DC66512025CF0400C69C3D /* HeartLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +149,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		03DC66522025CF0400C69C3D /* HeartLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				03DC66552025CF0400C69C3D /* AppDelegate.swift */,
+				03DC66572025CF0400C69C3D /* ViewController.swift */,
+				03DC66592025CF0400C69C3D /* Images.xcassets */,
+				03DC665B2025CF0400C69C3D /* Main.storyboard */,
+				03DC66532025CF0400C69C3D /* Supporting Files */,
+			);
+			path = HeartLauncher;
+			sourceTree = "<group>";
+		};
+		03DC66532025CF0400C69C3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03DC66542025CF0400C69C3D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +179,7 @@
 				0381901D2021DA31009F0F12 /* Sources */,
 				0381901E2021DA31009F0F12 /* Frameworks */,
 				0381901F2021DA31009F0F12 /* Resources */,
+				03DC66702025D57900C69C3D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -150,6 +208,23 @@
 			productReference = 038190332021DA31009F0F12 /* HeartTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		03DC66502025CF0400C69C3D /* HeartLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03DC666E2025CF0400C69C3D /* Build configuration list for PBXNativeTarget "HeartLauncher" */;
+			buildPhases = (
+				03DC664D2025CF0400C69C3D /* Sources */,
+				03DC664E2025CF0400C69C3D /* Frameworks */,
+				03DC664F2025CF0400C69C3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeartLauncher;
+			productName = HeartLauncher;
+			productReference = 03DC66512025CF0400C69C3D /* HeartLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +240,9 @@
 					038190322021DA31009F0F12 = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 038190202021DA31009F0F12;
+					};
+					03DC66502025CF0400C69C3D = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -183,6 +261,7 @@
 			targets = (
 				038190202021DA31009F0F12 /* Heart */,
 				038190322021DA31009F0F12 /* HeartTests */,
+				03DC66502025CF0400C69C3D /* HeartLauncher */,
 			);
 		};
 /* End PBXProject section */
@@ -201,6 +280,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03DC664F2025CF0400C69C3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DC665A2025CF0400C69C3D /* Images.xcassets in Resources */,
+				03DC665D2025CF0400C69C3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +313,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03DC664D2025CF0400C69C3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DC66582025CF0400C69C3D /* ViewController.swift in Sources */,
+				03DC66562025CF0400C69C3D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -240,6 +337,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				0381902D2021DA31009F0F12 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		03DC665B2025CF0400C69C3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03DC665C2025CF0400C69C3D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -385,6 +490,34 @@
 			};
 			name = Release;
 		};
+		03DC666A2025CF0400C69C3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HeartLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		03DC666B2025CF0400C69C3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HeartLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +544,15 @@
 			buildConfigurations = (
 				038190412021DA31009F0F12 /* Debug */,
 				038190422021DA31009F0F12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03DC666E2025CF0400C69C3D /* Build configuration list for PBXNativeTarget "HeartLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03DC666A2025CF0400C69C3D /* Debug */,
+				03DC666B2025CF0400C69C3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,14 +7,22 @@
 //
 
 import Cocoa
+import Foundation
+import ServiceManagement
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     var window: TransparentWindow!
 
     var statusItem: NSStatusItem!
     var hideMenuItem: NSMenuItem!
+    var openOnLoginMenuItem: NSMenuItem!
+    var alwaysOnTopMenuItem: NSMenuItem!
+
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+
+    let kOpenOnLoginMenuState = "OpenOnLoginMenuState"
+    let kAlwaysOnTop = "AlwaysOnTop"
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // TODO: I don't know if there's a less shifty way to do this
@@ -31,20 +39,53 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.autoenablesItems = false
         menu.addItemWithTitle("Bring to Front", action: Selector("bringToFront:"), keyEquivalent: "f")
         hideMenuItem = menu.addItemWithTitle("Hide", action: Selector("hideWindow:"), keyEquivalent: "h")
-        menu.addItemWithTitle("Always On Top", action: Selector("toggleAlwaysOnTop:"), keyEquivalent: "t")
+        // TODO: save and restore "hidden" state
+
+        alwaysOnTopMenuItem = menu.addItemWithTitle("Always On Top", action: Selector("toggleAlwaysOnTop:"), keyEquivalent: "t")
+        if let savedAlwaysOnTopMenuState = userDefaults.objectForKey(kAlwaysOnTop) as! Bool? {
+            // The default is off, if it was saved as on, then toggle it on
+            if savedAlwaysOnTopMenuState {
+                toggleAlwaysOnTop(alwaysOnTopMenuItem)
+            }
+        }
+
+        // Unfortunately due to the way this information is stored by Apple
+        // Reliably retrieving the current value of this flag is iffy,
+        // so we store the last value we set it to, we don't want to call toggle
+        // because we don't want to change the value. Instead we just store the
+        // menu state and hope that shenanigans don't ensue.
+        openOnLoginMenuItem = menu.addItemWithTitle("Open on Login", action: Selector("toggleOpenOnLogin:"), keyEquivalent: "")
+        if let savedOpenOnLoginMenuState = userDefaults.objectForKey(kOpenOnLoginMenuState) as! Int? {
+            openOnLoginMenuItem.state = savedOpenOnLoginMenuState
+        }
+
         menu.addItemWithTitle("Quit", action: Selector("terminate:"), keyEquivalent: "q")
 
         statusItem.menu = menu
         // TODO:
         // - Reset position (button)
         // - Reset size (button)
-        // - Open on Login (check box)
-
-        // TODO: save menu settings
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+    }
+
+    func toggleOpenOnLogin(sender: NSMenuItem) {
+        let launcherIdentifier = NSBundle.mainBundle().bundleIdentifier! + "Launcher" as CFString
+        let newState = sender.state == NSOnState
+            ? NSOffState
+            : NSOnState
+
+        let autoLaunch:Boolean = (newState == NSOnState) ? 1 : 0
+        if SMLoginItemSetEnabled(launcherIdentifier, autoLaunch) == 1 {
+            NSLog("Successfuly toggled auto launch")
+            sender.state = newState
+
+            userDefaults.setInteger(newState, forKey: kOpenOnLoginMenuState)
+            userDefaults.synchronize()
+        } else {
+            NSLog("Failed to toggle auto launch")
+        }
     }
 
     func toggleAlwaysOnTop(sender: NSMenuItem) {
@@ -60,6 +101,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             : kCGNormalWindowLevelKey
 
         NSLog("\(newLevelKey)")
+
+        userDefaults.setBool(newState == NSOnState, forKey: kAlwaysOnTop)
+        userDefaults.synchronize()
+
         window.level = Int(CGWindowLevelForKey(Int32(newLevelKey)))
     }
 
