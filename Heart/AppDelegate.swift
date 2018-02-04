@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     let kOpenOnLoginMenuState = "OpenOnLoginMenuState"
     let kAlwaysOnTop = "AlwaysOnTop"
+    let kWindowWasHiddenWhenAppWasTerminated = "WindowWasHiddenWhenAppWasTerminated"
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // TODO: I don't know if there's a less shifty way to do this
@@ -39,14 +40,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.autoenablesItems = false
         menu.addItemWithTitle("Bring to Front", action: Selector("bringToFront:"), keyEquivalent: "f")
         hideMenuItem = menu.addItemWithTitle("Hide", action: Selector("hideWindow:"), keyEquivalent: "h")
-        // TODO: save and restore "hidden" state
+        let savedWindowHidden = userDefaults.boolForKey(kWindowWasHiddenWhenAppWasTerminated)
+        if savedWindowHidden {
+            hideWindow(hideMenuItem)
+        }
 
         alwaysOnTopMenuItem = menu.addItemWithTitle("Always On Top", action: Selector("toggleAlwaysOnTop:"), keyEquivalent: "t")
-        if let savedAlwaysOnTopMenuState = userDefaults.objectForKey(kAlwaysOnTop) as! Bool? {
-            // The default is off, if it was saved as on, then toggle it on
-            if savedAlwaysOnTopMenuState {
-                toggleAlwaysOnTop(alwaysOnTopMenuItem)
-            }
+        let savedAlwaysOnTopMenuState = userDefaults.boolForKey(kAlwaysOnTop)
+        // The default is off, if it was saved as on, then toggle it on
+        if savedAlwaysOnTopMenuState {
+            toggleAlwaysOnTop(alwaysOnTopMenuItem)
         }
 
         // Unfortunately due to the way this information is stored by Apple
@@ -68,6 +71,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
+        let isVisible = window?.visible ?? false
+        userDefaults.setBool(!isVisible, forKey: kWindowWasHiddenWhenAppWasTerminated)
     }
 
     func toggleOpenOnLogin(sender: NSMenuItem) {
