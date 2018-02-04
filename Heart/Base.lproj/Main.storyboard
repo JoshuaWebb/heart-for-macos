@@ -432,8 +432,16 @@
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Heart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jch-3O-p0l" customClass="ResizeView" customModule="Heart" customModuleProvider="target">
+                                <rect key="frame" x="115" y="2" width="13" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="13" id="DP5-rO-MDm"/>
+                                    <constraint firstAttribute="height" constant="13" id="jA3-dz-Iny"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="gripHandle" id="pPF-4K-zg7"/>
+                            </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="40h-D5-iaF">
                                 <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Heart" id="BHK-eG-LE9"/>
@@ -441,21 +449,26 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="40h-D5-iaF" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="4ee-BU-RcE"/>
+                            <constraint firstAttribute="trailing" secondItem="Jch-3O-p0l" secondAttribute="trailing" constant="2" id="HIc-bh-J5U"/>
                             <constraint firstItem="40h-D5-iaF" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Iss-Tw-pyS"/>
                             <constraint firstAttribute="trailing" secondItem="40h-D5-iaF" secondAttribute="trailing" id="KtK-X4-mGc"/>
                             <constraint firstAttribute="bottom" secondItem="40h-D5-iaF" secondAttribute="bottom" id="een-Qp-P7H"/>
+                            <constraint firstAttribute="bottom" secondItem="Jch-3O-p0l" secondAttribute="bottom" constant="2" id="fVr-qH-Go5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gripHandle" destination="Jch-3O-p0l" id="KjL-kS-1xD"/>
                         <outlet property="mainImageView" destination="40h-D5-iaF" id="lbc-5K-wxD"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="PAs-Ee-YbH"/>
             </objects>
             <point key="canvasLocation" x="75" y="570"/>
         </scene>
     </scenes>
     <resources>
         <image name="Heart" width="615" height="595"/>
+        <image name="gripHandle" width="9.75" height="9.75"/>
     </resources>
 </document>

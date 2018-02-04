@@ -17,6 +17,8 @@
 		03DC665A2025CF0400C69C3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03DC66592025CF0400C69C3D /* Images.xcassets */; };
 		03DC665D2025CF0400C69C3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03DC665B2025CF0400C69C3D /* Main.storyboard */; };
 		03DC66712025D58B00C69C3D /* HeartLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DC66512025CF0400C69C3D /* HeartLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		03DE2E1B20272817009A0B27 /* ResizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2E1A20272817009A0B27 /* ResizeView.swift */; };
+		03DE2E1D202731FD009A0B27 /* ResizeCursorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2E1C202731FD009A0B27 /* ResizeCursorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		03DC66552025CF0400C69C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03DC66592025CF0400C69C3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		03DC665C2025CF0400C69C3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03DE2E1A20272817009A0B27 /* ResizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeView.swift; sourceTree = "<group>"; };
+		03DE2E1C202731FD009A0B27 /* ResizeCursorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeCursorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				0381902C2021DA31009F0F12 /* Main.storyboard */,
 				038190242021DA31009F0F12 /* Supporting Files */,
 				03AEC804202338A3007B47D5 /* TransparentWindow.swift */,
+				03DE2E1A20272817009A0B27 /* ResizeView.swift */,
+				03DE2E1C202731FD009A0B27 /* ResizeCursorExtension.swift */,
 			);
 			path = Heart;
 			sourceTree = "<group>";
@@ -292,8 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DE2E1B20272817009A0B27 /* ResizeView.swift in Sources */,
 				03AEC805202338A4007B47D5 /* TransparentWindow.swift in Sources */,
 				038190292021DA31009F0F12 /* ViewController.swift in Sources */,
+				03DE2E1D202731FD009A0B27 /* ResizeCursorExtension.swift in Sources */,
 				038190272021DA31009F0F12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
