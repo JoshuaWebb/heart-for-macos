@@ -19,36 +19,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var openOnLoginMenuItem: NSMenuItem!
     var alwaysOnTopMenuItem: NSMenuItem!
 
-    let userDefaults = NSUserDefaults.standardUserDefaults()
-
-    let kOpenOnLoginMenuState = "OpenOnLoginMenuState"
-    let kAlwaysOnTop = "AlwaysOnTop"
-    let kWindowWasHiddenWhenAppWasTerminated = "WindowWasHiddenWhenAppWasTerminated"
-
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // TODO: I don't know if there's a less shifty way to do this
         //       I also have no idea if this actually belongs here.
         window = NSApplication.sharedApplication().windows[0] as! TransparentWindow
 
-        // TODO: can we use the named literal/value here instead of -1??s
-        // I kept getting compile errors, and I couldn't be bothered
-        // looking into them at the time.
+        // TODO: once we move to a higher version of swift/XCode
+        //       use `NSVariableStatusItemLength`
         statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
-        statusItem.image = NSImage(named: "icon_menu")
+        statusItem.image = NSImage(named: Constants.ImageName.statusItemIcon)
 
         let menu = NSMenu()
         menu.autoenablesItems = false
         menu.addItemWithTitle("Bring to Front", action: Selector("bringToFront:"), keyEquivalent: "f")
         hideMenuItem = menu.addItemWithTitle("Hide", action: Selector("hideWindow:"), keyEquivalent: "h")
-        let savedWindowHidden = userDefaults.boolForKey(kWindowWasHiddenWhenAppWasTerminated)
-        if savedWindowHidden {
+        if Preferences.savedWindowHidden {
             hideWindow(hideMenuItem)
         }
 
         alwaysOnTopMenuItem = menu.addItemWithTitle("Always On Top", action: Selector("toggleAlwaysOnTop:"), keyEquivalent: "t")
-        let savedAlwaysOnTopMenuState = userDefaults.boolForKey(kAlwaysOnTop)
         // The default is off, if it was saved as on, then toggle it on
-        if savedAlwaysOnTopMenuState {
+        if Preferences.alwaysOnTop {
             toggleAlwaysOnTop(alwaysOnTopMenuItem)
         }
 
@@ -58,9 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // because we don't want to change the value. Instead we just store the
         // menu state and hope that shenanigans don't ensue.
         openOnLoginMenuItem = menu.addItemWithTitle("Open on Login", action: Selector("toggleOpenOnLogin:"), keyEquivalent: "")
-        if let savedOpenOnLoginMenuState = userDefaults.objectForKey(kOpenOnLoginMenuState) as! Int? {
-            openOnLoginMenuItem.state = savedOpenOnLoginMenuState
-        }
+        openOnLoginMenuItem.state = Preferences.openOnLoginMenuState ?? NSOffState
 
         menu.addItemWithTitle("Quit", action: Selector("terminate:"), keyEquivalent: "q")
 
@@ -68,11 +57,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // TODO:
         // - Reset position (button)
         // - Reset size (button)
+        // - Lock
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         let isVisible = window?.visible ?? false
-        userDefaults.setBool(!isVisible, forKey: kWindowWasHiddenWhenAppWasTerminated)
+        Preferences.savedWindowHidden = !isVisible
     }
 
     func toggleOpenOnLogin(sender: NSMenuItem) {
@@ -86,8 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             NSLog("Successfuly toggled auto launch")
             sender.state = newState
 
-            userDefaults.setInteger(newState, forKey: kOpenOnLoginMenuState)
-            userDefaults.synchronize()
+            Preferences.openOnLoginMenuState = newState
         } else {
             NSLog("Failed to toggle auto launch")
         }
@@ -105,11 +94,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             ? kCGFloatingWindowLevelKey
             : kCGNormalWindowLevelKey
 
-        NSLog("\(newLevelKey)")
-
-        userDefaults.setBool(newState == NSOnState, forKey: kAlwaysOnTop)
-        userDefaults.synchronize()
-
+        Preferences.alwaysOnTop = newState == NSOnState
         window.level = Int(CGWindowLevelForKey(Int32(newLevelKey)))
     }
 

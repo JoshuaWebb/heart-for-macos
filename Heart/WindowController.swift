@@ -13,7 +13,7 @@ class WindowController: NSWindowController {
 
     override func windowDidLoad() {
         super.windowDidLoad()
-        window?.setFrameAutosaveName("MainWindow")
-        window?.setFrameUsingName("MainWindow", force: true)
+        window?.setFrameAutosaveName(Constants.savedFrameName)
+        window?.setFrameUsingName(Constants.savedFrameName, force: true)
     }
 }

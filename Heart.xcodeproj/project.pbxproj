@@ -14,6 +14,8 @@
 		0381903A2021DA31009F0F12 /* HeartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038190392021DA31009F0F12 /* HeartTests.swift */; };
 		0395CC702029AC33002ED9E7 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395CC6F2029AC33002ED9E7 /* WindowController.swift */; };
 		03AEC805202338A4007B47D5 /* TransparentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AEC804202338A3007B47D5 /* TransparentWindow.swift */; };
+		03B80E8A2029C464003B2B58 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B80E892029C464003B2B58 /* Constants.swift */; };
+		03B80E8C2029C680003B2B58 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B80E8B2029C680003B2B58 /* Preferences.swift */; };
 		03DC66562025CF0400C69C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC66552025CF0400C69C3D /* AppDelegate.swift */; };
 		03DC665A2025CF0400C69C3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03DC66592025CF0400C69C3D /* Images.xcassets */; };
 		03DC665D2025CF0400C69C3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03DC665B2025CF0400C69C3D /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		038190392021DA31009F0F12 /* HeartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTests.swift; sourceTree = "<group>"; };
 		0395CC6F2029AC33002ED9E7 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		03AEC804202338A3007B47D5 /* TransparentWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentWindow.swift; sourceTree = "<group>"; };
+		03B80E892029C464003B2B58 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		03B80E8B2029C680003B2B58 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		03DC66512025CF0400C69C3D /* HeartLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DC66542025CF0400C69C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DC66552025CF0400C69C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				03DE2E1A20272817009A0B27 /* ResizeView.swift */,
 				03DE2E1C202731FD009A0B27 /* ResizeCursorExtension.swift */,
 				0395CC6F2029AC33002ED9E7 /* WindowController.swift */,
+				03B80E892029C464003B2B58 /* Constants.swift */,
+				03B80E8B2029C680003B2B58 /* Preferences.swift */,
 			);
 			path = Heart;
 			sourceTree = "<group>";
@@ -305,7 +311,9 @@
 				0395CC702029AC33002ED9E7 /* WindowController.swift in Sources */,
 				03AEC805202338A4007B47D5 /* TransparentWindow.swift in Sources */,
 				038190292021DA31009F0F12 /* ViewController.swift in Sources */,
+				03B80E8A2029C464003B2B58 /* Constants.swift in Sources */,
 				03DE2E1D202731FD009A0B27 /* ResizeCursorExtension.swift in Sources */,
+				03B80E8C2029C680003B2B58 /* Preferences.swift in Sources */,
 				038190272021DA31009F0F12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
