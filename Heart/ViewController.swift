@@ -11,6 +11,8 @@ import Cocoa
 class ViewController: NSViewController {
 
     @IBOutlet weak var gripHandle: NSImageView!
+    // TODO: does this guy leak memory by caching resized images?
+    //       are those ever reclaimed?
     @IBOutlet weak var mainImageView: NSImageView!
 
     var cursor: NSCursor = NSCursor.resizeNorthWestSouthEastCursor()
@@ -18,7 +20,6 @@ class ViewController: NSViewController {
     var gripHandleEnabled = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: restore window size
     }
 
     override var representedObject: AnyObject? {
@@ -107,8 +108,6 @@ class ViewController: NSViewController {
         initialLocation = nil
         if (isResize) {
             self.view.window!.enableCursorRects()
-
-            // TODO: save window size...
         }
         isResize = false
     }

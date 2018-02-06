@@ -12,6 +12,7 @@
 		0381902B2021DA31009F0F12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0381902A2021DA31009F0F12 /* Images.xcassets */; };
 		0381902E2021DA31009F0F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0381902C2021DA31009F0F12 /* Main.storyboard */; };
 		0381903A2021DA31009F0F12 /* HeartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038190392021DA31009F0F12 /* HeartTests.swift */; };
+		0395CC702029AC33002ED9E7 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395CC6F2029AC33002ED9E7 /* WindowController.swift */; };
 		03AEC805202338A4007B47D5 /* TransparentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AEC804202338A3007B47D5 /* TransparentWindow.swift */; };
 		03DC66562025CF0400C69C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC66552025CF0400C69C3D /* AppDelegate.swift */; };
 		03DC665A2025CF0400C69C3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03DC66592025CF0400C69C3D /* Images.xcassets */; };
@@ -54,6 +55,7 @@
 		038190332021DA31009F0F12 /* HeartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		038190382021DA31009F0F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		038190392021DA31009F0F12 /* HeartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTests.swift; sourceTree = "<group>"; };
+		0395CC6F2029AC33002ED9E7 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		03AEC804202338A3007B47D5 /* TransparentWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentWindow.swift; sourceTree = "<group>"; };
 		03DC66512025CF0400C69C3D /* HeartLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DC66542025CF0400C69C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				03AEC804202338A3007B47D5 /* TransparentWindow.swift */,
 				03DE2E1A20272817009A0B27 /* ResizeView.swift */,
 				03DE2E1C202731FD009A0B27 /* ResizeCursorExtension.swift */,
+				0395CC6F2029AC33002ED9E7 /* WindowController.swift */,
 			);
 			path = Heart;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03DE2E1B20272817009A0B27 /* ResizeView.swift in Sources */,
+				0395CC702029AC33002ED9E7 /* WindowController.swift in Sources */,
 				03AEC805202338A4007B47D5 /* TransparentWindow.swift in Sources */,
 				038190292021DA31009F0F12 /* ViewController.swift in Sources */,
 				03DE2E1D202731FD009A0B27 /* ResizeCursorExtension.swift in Sources */,
