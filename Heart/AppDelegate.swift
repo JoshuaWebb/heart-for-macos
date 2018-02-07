@@ -35,9 +35,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let menu = NSMenu()
         menu.autoenablesItems = false
         menu.addItemWithTitle("Bring to Front", action: Selector("bringToFront:"), keyEquivalent: "f")
+
         hideMenuItem = menu.addItemWithTitle("Hide", action: Selector("hideWindow:"), keyEquivalent: "h")
-        if Preferences.savedWindowHidden {
-            hideWindow(hideMenuItem)
+        hideMenuItem.bind("enabled", toObject: self.window, withKeyPath: "visible", options: nil)
+        if !Preferences.savedWindowHidden {
+            self.windowController.showWindow(self)
         }
 
         var lockMenuItem = menu.addItemWithTitle("Lock", action: Selector("toggleLock:"), keyEquivalent: "l")
@@ -119,14 +121,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func bringToFront(sender: NSMenuItem) {
         NSLog("bringToFront")
-        hideMenuItem.enabled = true
         NSApp.activateIgnoringOtherApps(true)
         window.makeKeyAndOrderFront(sender)
     }
 
     func hideWindow(sender: NSMenuItem) {
         NSLog("hideWindow")
-        sender.enabled = false
         window.orderOut(sender)
     }
 }
