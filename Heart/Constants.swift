@@ -16,6 +16,7 @@ struct Constants {
 
     struct PreferenceKey {
         static let alwaysOnTop = "AlwaysOnTop"
+        static let locked = "Locked"
         static let windowWasHiddenWhenAppWasTerminated = "WindowWasHiddenWhenAppWasTerminated"
         static let openOnLoginMenuState = "OpenOnLoginMenuState"
     }

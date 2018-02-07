@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     //       are those ever reclaimed?
     @IBOutlet weak var mainImageView: NSImageView!
 
+    var isLocked = false
     var cursor: NSCursor = NSCursor.resizeNorthWestSouthEastCursor()
 
     var gripHandleEnabled = false
@@ -35,6 +36,10 @@ class ViewController: NSViewController {
     }
 
     override func rightMouseDown(theEvent: NSEvent) {
+        if (self.isLocked) {
+            return
+        }
+
         toggleResizeHandle()
     }
 
@@ -44,7 +49,12 @@ class ViewController: NSViewController {
     var initialLocation: NSPoint? = nil
 
     override func mouseDown(theEvent: NSEvent) {
+        if (self.isLocked) {
+            return
+        }
+
         super.mouseDown(theEvent)
+
         self.isResize = gripHandle.hitTest(theEvent.locationInWindow) != nil
         self.isDragging = mainImageView.hitTest(theEvent.locationInWindow) != nil
         self.initialWidth = self.view.window!.frame.width
@@ -52,6 +62,10 @@ class ViewController: NSViewController {
     }
 
     override func mouseDragged(theEvent: NSEvent) {
+        if (self.isLocked) {
+            return
+        }
+
         super.mouseDragged(theEvent)
         if initialLocation == nil {
             return
@@ -66,6 +80,10 @@ class ViewController: NSViewController {
     }
 
     func resizeWindow(theEvent: NSEvent) {
+        if (self.isLocked) {
+            return
+        }
+
         var screenFrame = NSScreen.mainScreen()!.frame
         var currentFrame = self.view.window!.frame
         let minSize = self.view.window!.minSize
@@ -93,6 +111,10 @@ class ViewController: NSViewController {
     }
 
     func dragWindow(theEvent: NSEvent) {
+        if (self.isLocked) {
+            return
+        }
+
         var screenFrame = NSScreen.mainScreen()!.frame
         var windowFrame = self.view.window!.frame
         var newOrigin = windowFrame.origin

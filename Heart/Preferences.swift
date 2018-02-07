@@ -15,6 +15,16 @@ class Preferences {
         }
     }
 
+    static var locked: Bool {
+        set {
+            userDefaults.setBool(newValue, forKey: Constants.PreferenceKey.locked)
+            userDefaults.synchronize()
+        }
+        get {
+            return userDefaults.boolForKey(Constants.PreferenceKey.locked)
+        }
+    }
+
     static var savedWindowHidden: Bool {
         set {
             userDefaults.setBool(newValue, forKey: Constants.PreferenceKey.windowWasHiddenWhenAppWasTerminated)

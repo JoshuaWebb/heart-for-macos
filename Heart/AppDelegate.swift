@@ -13,6 +13,8 @@ import ServiceManagement
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     var window: TransparentWindow!
+    var windowController: WindowController!
+    weak var viewController: ViewController!
 
     var statusItem: NSStatusItem!
     var hideMenuItem: NSMenuItem!
@@ -20,9 +22,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var alwaysOnTopMenuItem: NSMenuItem!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // TODO: I don't know if there's a less shifty way to do this
-        //       I also have no idea if this actually belongs here.
-        window = NSApplication.sharedApplication().windows[0] as! TransparentWindow
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        self.windowController = storyboard?.instantiateControllerWithIdentifier("mainWindowController") as! WindowController
+        self.window = self.windowController.window as! TransparentWindow
+        self.viewController = self.window.contentViewController as! ViewController
 
         // TODO: once we move to a higher version of swift/XCode
         //       use `NSVariableStatusItemLength`
@@ -35,6 +38,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         hideMenuItem = menu.addItemWithTitle("Hide", action: Selector("hideWindow:"), keyEquivalent: "h")
         if Preferences.savedWindowHidden {
             hideWindow(hideMenuItem)
+        }
+
+        var lockMenuItem = menu.addItemWithTitle("Lock", action: Selector("toggleLock:"), keyEquivalent: "l")
+        if Preferences.locked {
+            toggleLock(lockMenuItem!)
         }
 
         alwaysOnTopMenuItem = menu.addItemWithTitle("Always On Top", action: Selector("toggleAlwaysOnTop:"), keyEquivalent: "t")
@@ -57,7 +65,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // TODO:
         // - Reset position (button)
         // - Reset size (button)
-        // - Lock
+    }
+
+    func toggleLock(sender: NSMenuItem) {
+        let newIsLocked = !self.viewController.isLocked
+
+        self.viewController.isLocked = newIsLocked;
+        let newState = newIsLocked
+            ? NSOnState
+            : NSOffState
+
+        sender.state = newState;
+        Preferences.locked = newIsLocked;
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
