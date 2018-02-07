@@ -34,9 +34,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let menu = NSMenu()
         menu.autoenablesItems = false
-        menu.addItemWithTitle("Bring to Front", action: Selector("bringToFront:"), keyEquivalent: "f")
+        menu.addItemWithTitle("Bring to Front", action: Selector("bringToFront:"), keyEquivalent: "")
 
-        hideMenuItem = menu.addItemWithTitle("Hide", action: Selector("hideWindow:"), keyEquivalent: "h")
+        hideMenuItem = menu.addItemWithTitle("Hide", action: Selector("hideWindow:"), keyEquivalent: "")
         hideMenuItem.bind("enabled", toObject: self.window, withKeyPath: "visible", options: nil)
         if !Preferences.savedWindowHidden {
             self.windowController.showWindow(self)
@@ -44,12 +44,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         menu.addItem(NSMenuItem.separatorItem())
 
-        var lockMenuItem = menu.addItemWithTitle("Lock", action: Selector("toggleLock:"), keyEquivalent: "l")
+        var lockMenuItem = menu.addItemWithTitle("Lock", action: Selector("toggleLock:"), keyEquivalent: "")
         if Preferences.locked {
             toggleLock(lockMenuItem!)
         }
 
-        alwaysOnTopMenuItem = menu.addItemWithTitle("Always On Top", action: Selector("toggleAlwaysOnTop:"), keyEquivalent: "t")
+        alwaysOnTopMenuItem = menu.addItemWithTitle("Always On Top", action: Selector("toggleAlwaysOnTop:"), keyEquivalent: "")
         if Preferences.alwaysOnTop {
             toggleAlwaysOnTop(alwaysOnTopMenuItem)
         }
@@ -64,7 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         menu.addItem(NSMenuItem.separatorItem())
 
-        menu.addItemWithTitle("Quit", action: Selector("terminate:"), keyEquivalent: "q")
+        menu.addItemWithTitle("Quit", action: Selector("terminate:"), keyEquivalent: "")
 
         statusItem.menu = menu
 
