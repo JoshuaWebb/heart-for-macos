@@ -50,15 +50,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         alwaysOnTopMenuItem = menu.addItemWithTitle("Always On Top", action: Selector("toggleAlwaysOnTop:"), keyEquivalent: "t")
-        // The default is off, if it was saved as on, then toggle it on
         if Preferences.alwaysOnTop {
             toggleAlwaysOnTop(alwaysOnTopMenuItem)
         }
 
         // Unfortunately due to the way this information is stored by Apple
-        // Reliably retrieving the current value of this flag is iffy,
-        // so we store the last value we set it to, we don't want to call toggle
-        // because we don't want to change the value. Instead we just store the
+        // Reliably retrieving the actual current state of the auto launch mechanism
+        // is iffy, so we store the last value we set it to, we don't want to call
+        // toggle because we don't want to change the value. Instead we just store the
         // menu state and hope that shenanigans don't ensue.
         openOnLoginMenuItem = menu.addItemWithTitle("Open on Login", action: Selector("toggleOpenOnLogin:"), keyEquivalent: "")
         openOnLoginMenuItem.state = Preferences.openOnLoginMenuState ?? NSOffState
@@ -68,9 +67,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItemWithTitle("Quit", action: Selector("terminate:"), keyEquivalent: "q")
 
         statusItem.menu = menu
+
         // TODO:
+        // - About
         // - Reset position (button)
         // - Reset size (button)
+        // - Help
     }
 
     func toggleLock(sender: NSMenuItem) {
