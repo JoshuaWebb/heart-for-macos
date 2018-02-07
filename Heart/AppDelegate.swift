@@ -42,6 +42,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.windowController.showWindow(self)
         }
 
+        menu.addItem(NSMenuItem.separatorItem())
+
         var lockMenuItem = menu.addItemWithTitle("Lock", action: Selector("toggleLock:"), keyEquivalent: "l")
         if Preferences.locked {
             toggleLock(lockMenuItem!)
@@ -60,6 +62,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // menu state and hope that shenanigans don't ensue.
         openOnLoginMenuItem = menu.addItemWithTitle("Open on Login", action: Selector("toggleOpenOnLogin:"), keyEquivalent: "")
         openOnLoginMenuItem.state = Preferences.openOnLoginMenuState ?? NSOffState
+
+        menu.addItem(NSMenuItem.separatorItem())
 
         menu.addItemWithTitle("Quit", action: Selector("terminate:"), keyEquivalent: "q")
 
