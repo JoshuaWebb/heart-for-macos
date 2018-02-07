@@ -18,8 +18,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var statusItem: NSStatusItem!
     var hideMenuItem: NSMenuItem!
+    var resetSizeMenuItem: NSMenuItem!
+    var resetPositionMenuItem: NSMenuItem!
     var openOnLoginMenuItem: NSMenuItem!
     var alwaysOnTopMenuItem: NSMenuItem!
+
+    var isLocked: Bool {
+        set {
+            self.viewController.isLocked = newValue
+        }
+        get {
+            return self.viewController.isLocked
+        }
+    }
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
@@ -41,6 +52,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if !Preferences.savedWindowHidden {
             self.windowController.showWindow(self)
         }
+
+        menu.addItem(NSMenuItem.separatorItem())
+
+        resetSizeMenuItem = menu.addItemWithTitle("Reset Size", action: Selector("resetSize:"), keyEquivalent: "")
+        resetPositionMenuItem = menu.addItemWithTitle("Reset Position", action: Selector("resetPosition:"), keyEquivalent: "")
 
         menu.addItem(NSMenuItem.separatorItem())
 
@@ -70,18 +86,50 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         // TODO:
         // - About
-        // - Reset position (button)
-        // - Reset size (button)
         // - Help
     }
 
-    func toggleLock(sender: NSMenuItem) {
-        let newIsLocked = !self.viewController.isLocked
+    func resetSize(sender: NSMenuItem) {
+        let originalFrame = self.window.frame
+        var newFrame = self.window.frame
 
-        self.viewController.isLocked = newIsLocked;
+        newFrame.size = Constants.Defaults.frameSize
+
+        // Offset the origin so that it doesn't move
+        let heightDifference = originalFrame.size.height - newFrame.size.height
+        newFrame.origin.y += heightDifference
+
+        // Ensure the window doesn't end up completely outside the bounds
+        if newFrame.origin.x < 0 {
+            newFrame.origin.x = 0
+        }
+
+        self.window.setFrame(newFrame, display: true, animate: true)
+    }
+
+    func resetPosition(sender: NSMenuItem) {
+        let screenFrame = self.window.screen!.frame
+        let windowHeight = self.window.frame.height
+        var newFrame = self.window.frame
+
+        // Set back to the top left corner
+        newFrame.origin.y = screenFrame.height - windowHeight
+        newFrame.origin.x = 0
+
+        self.window.setFrame(newFrame, display: true, animate: true)
+    }
+
+    func toggleLock(sender: NSMenuItem) {
+        let newIsLocked = !self.isLocked
+
+        self.isLocked = newIsLocked;
         let newState = newIsLocked
             ? NSOnState
             : NSOffState
+
+        // TODO: bind these directly to isLocked
+        resetSizeMenuItem.enabled = !newIsLocked
+        resetPositionMenuItem.enabled = !newIsLocked
 
         sender.state = newState;
         Preferences.locked = newIsLocked;

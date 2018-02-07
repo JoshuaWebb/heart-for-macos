@@ -84,9 +84,11 @@ class ViewController: NSViewController {
             return
         }
 
-        var screenFrame = NSScreen.mainScreen()!.frame
-        var currentFrame = self.view.window!.frame
-        let minSize = self.view.window!.minSize
+        let window = self.view.window!
+
+        var screenFrame = window.screen!.frame
+        var currentFrame = window.frame
+        let minSize = window.minSize
 
         let currentLocation = theEvent.locationInWindow
         let xDiff = (currentLocation.x - initialLocation!.x)
@@ -107,7 +109,7 @@ class ViewController: NSViewController {
             width: newWidth,
             height: newHeight)
 
-        self.view.window!.setFrame(newFrame, display: true)
+        window.setFrame(newFrame, display: true)
     }
 
     func dragWindow(theEvent: NSEvent) {
@@ -115,7 +117,6 @@ class ViewController: NSViewController {
             return
         }
 
-        var screenFrame = NSScreen.mainScreen()!.frame
         var windowFrame = self.view.window!.frame
         var newOrigin = windowFrame.origin
 

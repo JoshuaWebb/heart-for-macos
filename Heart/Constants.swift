@@ -6,6 +6,8 @@
 //  Copyright (c) 2018 Joshua Webb. All rights reserved.
 //
 
+import Cocoa
+
 struct Constants {
     static let savedFrameName = "MainWindow"
 
@@ -19,5 +21,9 @@ struct Constants {
         static let locked = "Locked"
         static let windowWasHiddenWhenAppWasTerminated = "WindowWasHiddenWhenAppWasTerminated"
         static let openOnLoginMenuState = "OpenOnLoginMenuState"
+    }
+
+    struct Defaults {
+        static let frameSize = NSSize(width: 130, height: 130)
     }
 }
