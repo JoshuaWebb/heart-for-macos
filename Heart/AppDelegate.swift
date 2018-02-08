@@ -43,11 +43,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
         statusItem.image = NSImage(named: Constants.ImageName.statusItemIcon)
 
+        let displayName = NSBundle.mainBundle().displayName
         let menu = NSMenu()
         menu.autoenablesItems = false
+
+        menu.addItemWithTitle("About \(displayName)", action: Selector("orderFrontStandardAboutPanel:"), keyEquivalent: "")
+
+        menu.addItem(NSMenuItem.separatorItem())
+
         menu.addItemWithTitle("Bring to Front", action: Selector("bringToFront:"), keyEquivalent: "")
 
-        hideMenuItem = menu.addItemWithTitle("Hide", action: Selector("hideWindow:"), keyEquivalent: "")
+        hideMenuItem = menu.addItemWithTitle("Hide \(displayName)", action: Selector("hide:"), keyEquivalent: "")
         hideMenuItem.bind("enabled", toObject: self.window, withKeyPath: "visible", options: nil)
         if !Preferences.savedWindowHidden {
             self.windowController.showWindow(self)
@@ -60,7 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         menu.addItem(NSMenuItem.separatorItem())
 
-        var lockMenuItem = menu.addItemWithTitle("Lock", action: Selector("toggleLock:"), keyEquivalent: "")
+        var lockMenuItem = menu.addItemWithTitle("Lock \(displayName)", action: Selector("toggleLock:"), keyEquivalent: "")
         if Preferences.locked {
             toggleLock(lockMenuItem!)
         }
@@ -80,13 +86,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         menu.addItem(NSMenuItem.separatorItem())
 
-        menu.addItemWithTitle("Quit", action: Selector("terminate:"), keyEquivalent: "")
+        menu.addItemWithTitle("Quit \(displayName)", action: Selector("terminate:"), keyEquivalent: "")
 
         statusItem.menu = menu
-
-        // TODO:
-        // - About
-        // - Help
     }
 
     func resetSize(sender: NSMenuItem) {
@@ -177,11 +179,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSLog("bringToFront")
         NSApp.activateIgnoringOtherApps(true)
         window.makeKeyAndOrderFront(sender)
-    }
-
-    func hideWindow(sender: NSMenuItem) {
-        NSLog("hideWindow")
-        window.orderOut(sender)
     }
 }
 
