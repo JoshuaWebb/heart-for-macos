@@ -12,6 +12,7 @@ import Cocoa
 extension NSCursor {
     static func resizeNorthWestSouthEastCursor() -> NSCursor {
         // why for the love of god is the real version of this cursor not exposed?!
-        return NSCursor(image: NSImage(named: Constants.ImageName.windowResizeNorthWestSouthEastCursor)!, hotSpot: NSPoint(x: 7, y: 7))
+        let image = NSImage(named: Constants.ImageName.windowResizeNorthWestSouthEastCursor)!
+        return NSCursor(image: image, hotSpot: NSPoint(x: image.size.width / 2.0, y: image.size.height / 2.0))
     }
 }
