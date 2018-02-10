@@ -140,6 +140,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(aNotification: NSNotification) {
         let isVisible = window?.visible ?? false
         Preferences.savedWindowHidden = !isVisible
+        NSStatusBar.systemStatusBar().removeStatusItem(statusItem)
     }
 
     func toggleOpenOnLogin(sender: NSMenuItem) {
