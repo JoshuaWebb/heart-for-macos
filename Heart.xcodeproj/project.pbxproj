@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		037FA3D4202EA50A00A58DBE /* LauncherAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 037FA3D3202EA50A00A58DBE /* LauncherAppDelegate.m */; };
+		037FA3D6202EAE5B00A58DBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 037FA3D5202EAE5B00A58DBE /* main.m */; };
 		038190272021DA31009F0F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038190262021DA31009F0F12 /* AppDelegate.swift */; };
 		038190292021DA31009F0F12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038190282021DA31009F0F12 /* ViewController.swift */; };
 		0381902B2021DA31009F0F12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0381902A2021DA31009F0F12 /* Images.xcassets */; };
@@ -18,7 +20,6 @@
 		03B80E8C2029C680003B2B58 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B80E8B2029C680003B2B58 /* Preferences.swift */; };
 		03B80E8F202C6C6B003B2B58 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B80E8E202C6C6B003B2B58 /* BundleExtension.swift */; };
 		03B80E95202C7F34003B2B58 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 03B80E94202C7F34003B2B58 /* Credits.rtf */; };
-		03DC66562025CF0400C69C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC66552025CF0400C69C3D /* AppDelegate.swift */; };
 		03DC665A2025CF0400C69C3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03DC66592025CF0400C69C3D /* Images.xcassets */; };
 		03DC665D2025CF0400C69C3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03DC665B2025CF0400C69C3D /* Main.storyboard */; };
 		03DC66712025D58B00C69C3D /* HeartLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03DC66512025CF0400C69C3D /* HeartLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -50,6 +51,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		037FA3D2202EA45600A58DBE /* LauncherAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LauncherAppDelegate.h; sourceTree = "<group>"; };
+		037FA3D3202EA50A00A58DBE /* LauncherAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherAppDelegate.m; sourceTree = "<group>"; };
+		037FA3D5202EAE5B00A58DBE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		038190212021DA31009F0F12 /* Heart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		038190252021DA31009F0F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		038190262021DA31009F0F12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +71,6 @@
 		03B80E94202C7F34003B2B58 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		03DC66512025CF0400C69C3D /* HeartLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DC66542025CF0400C69C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03DC66552025CF0400C69C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03DC66592025CF0400C69C3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		03DC665C2025CF0400C69C3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03DE2E1A20272817009A0B27 /* ResizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeView.swift; sourceTree = "<group>"; };
@@ -175,10 +178,12 @@
 		03DC66522025CF0400C69C3D /* HeartLauncher */ = {
 			isa = PBXGroup;
 			children = (
-				03DC66552025CF0400C69C3D /* AppDelegate.swift */,
 				03DC66592025CF0400C69C3D /* Images.xcassets */,
 				03DC665B2025CF0400C69C3D /* Main.storyboard */,
 				03DC66532025CF0400C69C3D /* Supporting Files */,
+				037FA3D2202EA45600A58DBE /* LauncherAppDelegate.h */,
+				037FA3D3202EA50A00A58DBE /* LauncherAppDelegate.m */,
+				037FA3D5202EAE5B00A58DBE /* main.m */,
 			);
 			path = HeartLauncher;
 			sourceTree = "<group>";
@@ -346,7 +351,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03DC66562025CF0400C69C3D /* AppDelegate.swift in Sources */,
+				037FA3D6202EAE5B00A58DBE /* main.m in Sources */,
+				037FA3D4202EA50A00A58DBE /* LauncherAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -531,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -538,6 +546,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = HeartLauncher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
