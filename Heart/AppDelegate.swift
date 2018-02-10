@@ -161,8 +161,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func toggleAlwaysOnTop(sender: NSMenuItem) {
-        NSLog("toggleAlwaysOnTop")
-
         let newState = sender.state == NSOnState
             ? NSOffState
             : NSOnState
@@ -177,7 +175,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func bringToFront(sender: NSMenuItem) {
-        NSLog("bringToFront")
         NSApp.activateIgnoringOtherApps(true)
         window.makeKeyAndOrderFront(sender)
     }
